@@ -1,4 +1,4 @@
-import { Pokemon } from './shared/pokemon';
+import { Pokemon } from './pokemon';
 
 
 export const POKEMONS: Pokemon[] = [
