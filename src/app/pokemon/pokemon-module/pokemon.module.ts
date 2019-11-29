@@ -1,3 +1,4 @@
+import { PokemonsService } from './../pokemons.service';
 import { PokemonRoutingModule } from './../pokemon-routing/pokemon-routing.module';
 import { PokemonTypeColorPipe } from './../pipes/pokemon-type-color.pipe';
 import { BorderCardDirective } from './../directives/border-card.directive';
@@ -18,7 +19,7 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     PokemonRoutingModule
   ],
-  providers: []
+  providers: [PokemonsService]
 })
 
 export class PokemonModule { }
