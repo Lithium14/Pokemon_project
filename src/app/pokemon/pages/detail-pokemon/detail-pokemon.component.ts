@@ -1,4 +1,4 @@
-import { PokemonsService } from './../../pokemons.service';
+import { PokemonsService } from '../../services/pokemons.service';
 import { Pokemon } from '../../../shared/pokemon';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -31,6 +31,11 @@ export class DetailPokemonComponent implements OnInit {
   // il revient à la page pokemons dès qu'il a terminé de consulter le détail
       goBack(): void {
           this.router.navigate(['/pokemons']);
+      }
+
+      goEdit(pokemon: Pokemon): void {
+        const link = ['/pokemon/edit', pokemon.id];
+        this.router.navigate(link);
       }
 }
 

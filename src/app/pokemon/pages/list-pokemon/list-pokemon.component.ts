@@ -1,4 +1,4 @@
-import { PokemonsService } from './../../pokemons.service';
+import { PokemonsService } from '../../services/pokemons.service';
 import { Router } from '@angular/router';
 import { Pokemon } from '../../../shared/pokemon';
 import { Component, OnInit } from '@angular/core';
