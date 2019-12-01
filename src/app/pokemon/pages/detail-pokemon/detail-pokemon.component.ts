@@ -20,13 +20,15 @@ export class DetailPokemonComponent implements OnInit {
   // Cette méthode n'a pas de valeur de retour et ne renvoie rien
   ngOnInit(): void {
 
-     // permet de récup les paramètres de la route associé à notre composant
-     // propriété snapshot permet de récup le paramètte de manière synchrone
-     // ( on bloque l'execution du programme tant qu'on a pas récup l'identifiant afficher)
-    // + permet de casser la valeur à droite en un nombre
-    // this.route permet d'acceder au paramètre passer dans le constructor
+
     const id = +this.route.snapshot.paramMap.get('id');
-    this.pokemon = this.pokemonsService.getPokemon(id);
+    this.pokemonsService.getPokemon(id)
+    .subscribe(pokemon => this.pokemon = pokemon);
+  }
+
+  delete(pokemon: Pokemon): void {
+    this.pokemonsService.deletePokemon(pokemon)
+    .subscribe( _ => this.goBack());
   }
   // il revient à la page pokemons dès qu'il a terminé de consulter le détail
       goBack(): void {

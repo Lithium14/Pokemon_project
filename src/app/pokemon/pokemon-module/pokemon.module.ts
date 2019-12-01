@@ -1,3 +1,5 @@
+import { LoaderComponent } from './../../loader/loader.component';
+import { SearchPokemonComponent } from './../search/search-pokemon/search-pokemon.component';
 import { EditPokemonComponent } from './../edit/edit-pokemon/edit-pokemon.component';
 import { PokemonFormComponent } from './../Formulaire/pokemon-form/pokemon-form.component';
 
@@ -17,12 +19,16 @@ import { FormsModule } from '@angular/forms';
 
 
 
+
+
 @NgModule({
   declarations: [
     ListPokemonComponent,
     DetailPokemonComponent,
     EditPokemonComponent,
+    SearchPokemonComponent,
     PokemonFormComponent,
+    LoaderComponent,
     BorderCardDirective,
     PokemonTypeColorPipe,
   ],
