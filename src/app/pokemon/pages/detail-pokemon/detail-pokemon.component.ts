@@ -32,7 +32,7 @@ export class DetailPokemonComponent implements OnInit {
   }
   // il revient à la page pokemons dès qu'il a terminé de consulter le détail
       goBack(): void {
-          this.router.navigate(['/pokemons']);
+          this.router.navigate(['/pokemons/all']);
       }
 
       goEdit(pokemon: Pokemon): void {

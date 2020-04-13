@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 // On déclare les routes de notre application
 const routes: Routes = [
-  {path: '', redirectTo: 'pokemons', pathMatch: 'full'},
+  {path: '', redirectTo: 'pokemons/all', pathMatch: 'full'},
   {path: '**', component: PagesNotFoundComponent}
 ];
 

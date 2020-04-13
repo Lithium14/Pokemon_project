@@ -12,6 +12,7 @@ import { ListPokemonComponent } from '../pages/list-pokemon/list-pokemon.compone
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from './../../Auth/auth.service';
 
 
 
@@ -37,7 +38,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     PokemonRoutingModule,
   ],
-  providers: [PokemonsService]
+  providers: [PokemonsService, AuthService]
 })
 
 export class PokemonModule { }
